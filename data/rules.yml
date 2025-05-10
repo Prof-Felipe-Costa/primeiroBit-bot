@@ -2,12 +2,28 @@ version: "3.1"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: diz tchau quando o usuário diz tchau
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: diz oi quando o usuário diz oi
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: greet
+  - action: utter_greet
+
+  
+- rule: mostrar opções de menu
+  steps:
+  - action: utter_menu
+  - intent: menu
+  next: 
+    - if: "menu == 1
+      then:
+        - action: utter_inicial
+      else:
+        - if: "menu == 2"
+          then:
+            - action: utter_python
+          else:
+            - action: utter_email

@@ -3,31 +3,31 @@ version: "3.1"
 intents:
   - greet
   - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - menu
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
+  - text: "Olá, tudo bem? como posso ajudar?"
+  - text: "Olá, como vai você? em que posso ajudar?"
   utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "Tchau"
+  - text: "Até logo"
+  - text: "Até mais"
+  utter_menu:
+  - text: "Para onde você quer ir?\n1) Menu inicial.\n2) Modulo python.\n3) Modulo Cria e-mail."
+  utter_inicial:
+  - url: "https://www.figma.com/proto/pyZRiRXp228nTmTu6ENThx/Untitled?node-id=86-3&p=f&t=xSx5flDDw6IGOmLW-0&scaling=min-zoom&content-scaling=fixed&page-id=86%3A2&starting-point-node-id=86%3A3"
+  utter_python:
+  - url: "https://www.figma.com/proto/pyZRiRXp228nTmTu6ENThx/Untitled?node-id=86-568&p=f&t=xSx5flDDw6IGOmLW-0&scaling=min-zoom&content-scaling=fixed&page-id=86%3A2&starting-point-node-id=86%3A3"
+  utter_email:
+  - url: "https://www.figma.com/proto/pyZRiRXp228nTmTu6ENThx/Untitled?node-id=86-379&p=f&t=xSx5flDDw6IGOmLW-0&scaling=min-zoom&content-scaling=fixed&page-id=86%3A2&starting-point-node-id=86%3A3"
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_menu
+  - utter_inicial
+  - utter_python
+  - utter_email
 
 session_config:
   session_expiration_time: 60
