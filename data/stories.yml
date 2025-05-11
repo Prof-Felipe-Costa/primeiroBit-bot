@@ -9,8 +9,8 @@ stories:
   - action: utter_menu
   - intent: menu
   - action: utter_inicial
+    - intent: goodbye
   - action: utter_goodbye
-  - intent: goodbye
 
 - story: menu python
   steps:
@@ -19,8 +19,8 @@ stories:
   - action: utter_menu
   - intent: menu
   - action: utter_python
-  - action: utter_goodbye
   - intent: goodbye
+  - action: utter_goodbye
 
 - story: menu email
   steps:
@@ -29,5 +29,5 @@ stories:
   - action: utter_menu
   - intent: menu
   - action: utter_email
-  - action: utter_goodbye
   - intent: goodbye
+  - action: utter_goodbye

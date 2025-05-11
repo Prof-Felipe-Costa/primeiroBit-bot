@@ -31,6 +31,6 @@ nlu:
     - até mais, tchau
 - intent: menu
   examples: |
-    - 1
-    - 2
-    - 3
+    - [1](lost)
+    - [2](lost)
+    - [3](lost)

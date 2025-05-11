@@ -14,10 +14,11 @@ stories:
       1
     intent: menu
   - action: utter_inicial
-  - action: utter_goodbye
   - user: |
       Tchau
     intent: goodbye
+  - action: utter_goodbye
+
 
 - story: caminho python
   steps:
@@ -30,10 +31,11 @@ stories:
       2
     intent: menu
   - action: utter_python
-  - action: utter_goodbye
   - user: |
       Tchau
     intent: goodbye
+  - action: utter_goodbye
+
 
 
 - story: caminho email
@@ -47,8 +49,9 @@ stories:
       3
     intent: menu
   - action: utter_email
-  - action: utter_goodbye
   - user: |
       Tchau
     intent: goodbye
+  - action: utter_goodbye
+
 

@@ -18,11 +18,11 @@ rules:
   - action: utter_menu
   - intent: menu
   next: 
-    - if: "menu == 1
+    - if: "lost == 1"
       then:
         - action: utter_inicial
       else:
-        - if: "menu == 2"
+        - if: "lost == 2"
           then:
             - action: utter_python
           else:
