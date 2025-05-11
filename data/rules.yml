@@ -13,17 +13,37 @@ rules:
   - action: utter_greet
 
   
-- rule: mostrar opções de menu
+- rule: Mostrar menu e capturar escolha
   steps:
   - action: utter_menu
   - intent: menu
-  next: 
-    - if: "lost == 1"
-      then:
-        - action: utter_inicial
-      else:
-        - if: "lost == 2"
-          then:
-            - action: utter_python
-          else:
-            - action: utter_email
+  # No 'next' here, the following rules will handle the different choices
+
+- rule: Ação para escolha 1 no menu
+  condition:
+  - slot_was_set:
+    - lost: "1"  # Check if 'lost' slot is set to "1"
+  steps:
+  - action: utter_inicial
+  - slot_was_set:
+    - lost: null # Clear the slot after using its value
+
+
+- rule: Ação para escolha 2 no menu
+  condition:
+  - slot_was_set:
+    - lost: "2"  # Check if 'lost' slot is set to "2"
+  steps:
+  - action: utter_python
+  - slot_was_set:
+    - lost: null # Clear the slot after using its value
+
+- rule: Ação para escolha 3 no menu
+  condition:
+  - slot_was_set:
+    - lost: "3"  # Check if 'lost' slot is set to "3"
+  steps:
+  - action: utter_email
+  - slot_was_set:
+    - lost: null # Clear the slot after using its value
+
