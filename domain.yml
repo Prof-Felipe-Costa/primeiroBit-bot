@@ -9,7 +9,7 @@ entities:
 slots:
   lost:
     type: any
-    mapping:
+    mappings:
       - type: from_entity
         entity: lost
 responses:
