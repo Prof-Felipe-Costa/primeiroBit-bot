@@ -11,6 +11,7 @@ rules:
   steps:
   - intent: greet
   - action: utter_greet
+    action_listen: false
 
   
 - rule: Mostrar menu e capturar escolha
