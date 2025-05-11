@@ -8,8 +8,6 @@ stories:
   - action: utter_greet
   - action: utter_menu
   - intent: menu
-    entity_aquisition:
-      - entity: lost
   - action: utter_inicial
   - intent: goodbye
   - action: utter_goodbye
@@ -20,8 +18,6 @@ stories:
   - action: utter_greet
   - action: utter_menu
   - intent: menu
-    entity_aquisition:
-      - entity: lost
   - action: utter_python
   - intent: goodbye
   - action: utter_goodbye
@@ -32,8 +28,6 @@ stories:
   - action: utter_greet
   - action: utter_menu
   - intent: menu
-    entity_aquisition:
-      - entity: lost
   - action: utter_email
   - intent: goodbye
   - action: utter_goodbye
